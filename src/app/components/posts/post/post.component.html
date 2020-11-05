@@ -1,1 +1,26 @@
-<p>post works!</p>
+<div class="container">
+    <mat-card class="post post-card">
+        <img matCardImage class="align-center" [src]="post.imagePost">
+        <!-- Cabecera -->                
+        <mat-card-header>
+            <mat-card-title>
+                {{ post.titlePost }}
+            </mat-card-title>
+        </mat-card-header>
+        
+        <!-- Cuerpo -->            
+        <mat-card-content>
+            <p class="content">
+                {{ post.contentPost }}
+            </p>
+        </mat-card-content>
+        <mat-card-actions align="start">
+            <!-- <button mat-button (click)="onAction1">Action1</button> -->
+        </mat-card-actions>
+        
+        <!-- Pie -->                
+        <mat-card-footer>
+            Footer
+        </mat-card-footer>
+    </mat-card>
+</div>

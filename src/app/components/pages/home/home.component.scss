@@ -1,0 +1,40 @@
+body {
+    background: red!important;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 24% 24% 24% 24%;
+    grid-column-gap: 15px;
+    justify-content: center;
+    margin-top: 25px;
+
+    a {
+        cursor: pointer;
+        color: #fff;
+        text-decoration: none   ;
+    }
+
+    .post-card{
+        background: #444;
+        border-radius: 5px;
+        color: #fff;
+        font-size: 150%;
+        padding: 20px;
+    
+        img {
+            height: 220px;
+            object-fit: cover;
+        }
+
+        .mat-card-image{
+            margin-top: 0px!important;
+        }
+        
+        /*p.content{
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }*/
+    }
+}

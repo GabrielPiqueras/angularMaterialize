@@ -8,6 +8,8 @@ import { NewPostModule } from './components/posts/new-post/new-post.module';
 import { PostComponent } from './components/posts/post/post.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule } from '@angular/router';
+// Material
+import { MaterialModule } from './material.module';
 
 @NgModule({
   declarations: [
@@ -21,6 +23,7 @@ import { RouterModule } from '@angular/router';
     NewPostModule,
     BrowserAnimationsModule,
     RouterModule,
+    MaterialModule
   ],
   providers: [],
   bootstrap: [AppComponent]

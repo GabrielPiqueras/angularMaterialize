@@ -1,4 +1,6 @@
-body {
+.mat-body, .mat-body-1, .mat-typography {
+    font: 400 14px/20px Roboto, "Helvetica Neue", sans-serif;
+    letter-spacing: normal;
     background: red!important;
 }
 
@@ -7,7 +9,8 @@ body {
     grid-template-columns: 24% 24% 24% 24%;
     grid-column-gap: 15px;
     justify-content: center;
-    margin-top: 25px;
+    margin-top: 10em;
+    margin-bottom: 4em;
 
     a {
         cursor: pointer;
@@ -31,10 +34,10 @@ body {
             margin-top: 0px!important;
         }
         
-        /*p.content{
+        p.content{
             overflow: hidden;
             text-overflow: ellipsis;
             white-space: nowrap;
-        }*/
+        }
     }
 }

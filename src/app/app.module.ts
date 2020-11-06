@@ -10,12 +10,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule } from '@angular/router';
 // Material
 import { MaterialModule } from './material.module';
+import { ToolbarComponent } from './shared/toolbar/toolbar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NewPostComponent,
-    PostComponent
+    PostComponent,
+    ToolbarComponent
   ],
   imports: [
     BrowserModule,

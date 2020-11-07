@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./toolbar.component.scss']
 })
 export class ToolbarComponent implements OnInit {
-
+  appName = 'Hunter x Hunter';
   constructor() { }
 
   ngOnInit(): void {

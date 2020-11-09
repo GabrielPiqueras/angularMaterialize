@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+// Firebase
+import { AngularFirestore } from '@angular/fire/firestore';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +9,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'angularMaterialize';
+
+  personajes: Observable<any[]>;
+
+  constructor(firestore: AngularFirestore){
+    this.personajes = firestore.collection('personajes').valueChanges();
+  }
+
+
 }

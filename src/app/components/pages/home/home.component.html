@@ -22,3 +22,7 @@
         </mat-card-footer>
     </mat-card>
 </div>
+
+<ul *ngFor="let personaje of personajes">
+    <li>Id: {{ personaje.id }} Nombre y apellidos: {{ personaje.nombre }} {{ usuario.edad }}</li>
+ </ul>

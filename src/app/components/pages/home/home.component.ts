@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+// Servicio conexion
+import { ConexionService } from 'src/app/services/conexion.service';
 
 @Component({
   selector: 'app-home',
@@ -6,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
+    public personajes:any;
+
     public posts: {
       id: string;
       titlePost: string;
@@ -37,8 +41,11 @@ export class HomeComponent implements OnInit {
       imagePost: 'https://i.pinimg.com/564x/86/b3/91/86b391c7396f3783908b81d7199646d0.jpg'
     }
   ]
-  constructor() {
 
+  constructor(private conexion:ConexionService) {
+    this.conexion.obtenerPersonajes().subscribe(personaje=>{
+      this.personajes = personaje;
+   });
   }
 
   ngOnInit(): void {

@@ -11,6 +11,11 @@ import { RouterModule } from '@angular/router';
 // Material
 import { MaterialModule } from './material.module';
 import { ToolbarComponent } from './shared/toolbar/toolbar.component';
+// Firebase
+import {AngularFireModule} from '@angular/fire';
+import {AngularFirestoreModule} from '@angular/fire/firestore';
+import {AngularFireStorageModule, BUCKET} from '@angular/fire/storage';
+import { environment } from 'src/environments/environment';
 
 @NgModule({
   declarations: [
@@ -25,9 +30,14 @@ import { ToolbarComponent } from './shared/toolbar/toolbar.component';
     NewPostModule,
     BrowserAnimationsModule,
     RouterModule,
-    MaterialModule
+    MaterialModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFirestoreModule,
+    AngularFireStorageModule
   ],
-  providers: [],
+  providers: [
+    {provide: BUCKET, useValue:'gs://angularmaterial-71c20.appspot.com'}
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
